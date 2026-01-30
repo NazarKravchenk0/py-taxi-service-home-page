@@ -4,18 +4,19 @@
 <head>
   <meta charset="utf-8">
   <title>{% block title %}Taxi Service{% endblock %}</title>
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
   <div class="layout">
-    <div class="sidebar">
+    <aside class="sidebar">
       {% block sidebar %}
         {% include "includes/sidebar.html" %}
       {% endblock %}
-    </div>
-    <div class="content">
+    </aside>
+
+    <main class="content">
       {% block content %}{% endblock %}
-    </div>
+    </main>
   </div>
 </body>
 </html>
