@@ -1,10 +1,11 @@
+from django.contrib.auth import get_user_model
 from django.shortcuts import render
 
-from taxi.models import Car, Driver, Manufacturer
+from taxi.models import Car, Manufacturer
 
 
 def index(request):
-    num_drivers = Driver.objects.count()
+    num_drivers = get_user_model().objects.count()
     num_manufacturers = Manufacturer.objects.count()
     num_cars = Car.objects.count()
 
